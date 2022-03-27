@@ -1,4 +1,4 @@
-// import { exit } from 'process';
+
 import React, {useState} from 'react';
 
 export function Form(props) {
@@ -68,19 +68,19 @@ export function Form(props) {
         <div className={`my-4 container text-${props.mode === 'light' ? 'dark' : 'light'}`}>
         <h1>{props.heading}</h1>
         <textarea className={`form-control my-4 text-${props.mode === 'light' ? 'dark' : 'light'}`} style = {{backgroundColor: props.mode === 'dark' ? '#020918' : 'white'}} value={Text} onChange={updateText} id="exampleFormControlTextarea1" rows="8"></textarea>
-        <button className='btn btn-primary mx-1' onClick={convertUpperCase}>Convert UpperCase</button>
-        <button className='btn btn-primary mx-1' onClick={convertLowerCase}>Convert LowerCase</button>
-        <button className='btn btn-primary mx-1' onClick={convertCapitalize}>Convert Capitalize</button>
-        <button className='btn btn-primary mx-1' onClick={copyClipboard}>Copy Clipboard</button>
-        <button className='btn btn-primary mx-1' onClick={extraSpaceRemove}>Extra Space Remove</button>
-        <button className='btn btn-primary mx-1' onClick={clearText}>Clear Text</button>
+        <button className='btn btn-primary mx-1 my-2' onClick={convertUpperCase}>Convert UpperCase</button>
+        <button className='btn btn-primary mx-1 my-2' onClick={convertLowerCase}>Convert LowerCase</button>
+        <button className='btn btn-primary mx-1 my-2' onClick={convertCapitalize}>Convert Capitalize</button>
+        <button className='btn btn-primary mx-1 my-2' onClick={copyClipboard}>Copy Clipboard</button>
+        <button className='btn btn-primary mx-1 my-2' onClick={extraSpaceRemove}>Extra Space Remove</button>
+        <button className='btn btn-primary mx-1 my-2' onClick={clearText}>Clear Text</button>
         </div>
         <div className={`container text-${props.mode === 'light' ? 'dark' : 'light'}`}>
-            <h1>Text Summary</h1>
+            <h1>Your Text Summary</h1>
             <p>{word_count} word and {Text.length} characters</p>
             <p>{0.032 * word_count} minutes read</p>
-            <h2>Text Preview</h2>
-            <p>{Text.length > 0 ? Text : "Enter some text in textarea"}</p>
+            <h2>Preview</h2>
+            <p>{Text.length > 0 ? Text : "Enter something in the textbox above to preview it here"}</p>
         </div>
     </>
 

@@ -30,7 +30,7 @@ function App() {
     if (mode === 'light') {
       setMode('dark');
       document.body.style.backgroundColor = '#020918';
-      showAlert("dark mode enable", "success");
+      showAlert("Dark Mode Enable", "success");
       // setInterval(() => {
       //   document.title = "VIRUS !!!!!!!";
       // }, 2000);
@@ -40,7 +40,7 @@ function App() {
     } else {
       setMode('light');
       document.body.style.backgroundColor = 'white';
-      showAlert("light mode enable", "success");
+      showAlert("Dark Mode Disable", "success");
     }
   }
   return (
@@ -49,8 +49,8 @@ function App() {
         <Navbar title="TextUtils" mode = {mode} toggleMode = {toggleMode}  about="About TextUtils"></Navbar>
         <Alert alert = {alert} />
           <Routes>
-            <Route exact path="/about" element = {<About/>}/>
-            <Route exact path="/FirstReactApp" element = {<Form showAlert = {showAlert} heading="Enter Text Here" mode = {mode}/>}/>
+            <Route exact path="/about" element = {<About mode = {mode}/>}/>
+            <Route exact path="/FirstReactApp" element = {<Form showAlert = {showAlert} heading="Enter the text to analyze below" mode = {mode}/>}/>
             {/* <Form showAlert = {showAlert} heading="Enter Text Here" mode = {mode} />  */}
           </Routes>
       </Router>
