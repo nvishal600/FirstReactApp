@@ -1,6 +1,6 @@
 {
-  "homepage": "https://nvishal600.github.io/TextUtils",
   "name": "myapp",
+  "homepage": "https://nvishal600.github.io/FirstReactApp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
