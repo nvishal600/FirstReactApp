@@ -46,7 +46,7 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar title="TextUtils" mode = {mode} toggleMode = {toggleMode}  about="About TextUtils"></Navbar>
+        <Navbar title="TextUtils" mode = {mode} toggleMode = {toggleMode}  about="About"></Navbar>
         <Alert alert = {alert} />
           <Routes>
             <Route exact path="/about" element = {<About mode = {mode}/>}/>
