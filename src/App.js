@@ -30,7 +30,7 @@ function App() {
     if (mode === 'light') {
       setMode('dark');
       document.body.style.backgroundColor = '#020918';
-      showAlert("Dark Mode Enable", "success");
+      showAlert("Dark mode has been enable", "success");
       // setInterval(() => {
       //   document.title = "VIRUS !!!!!!!";
       // }, 2000);
@@ -40,7 +40,7 @@ function App() {
     } else {
       setMode('light');
       document.body.style.backgroundColor = 'white';
-      showAlert("Dark Mode Disable", "success");
+      showAlert("Dark mode has been disable", "success");
     }
   }
   return (

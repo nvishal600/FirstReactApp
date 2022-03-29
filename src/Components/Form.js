@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 
 export function Form(props) {
     const [Text, setText] = useState('');
-    let word_arr = Text.split(" ");
+    let word_arr = Text.split(/[\s\n]+/);
     let word_count = 0;
 
     const filter_arr = word_arr.filter(function(ele, index) {
@@ -50,8 +50,7 @@ export function Form(props) {
     }
 
     function copyClipboard() {
-        document.getElementById('exampleFormControlTextarea1').select();
-        document.execCommand('copy');
+        navigator.clipboard.writeText(Text);
         props.showAlert("Copy Clipboard", "success");
     }
 
